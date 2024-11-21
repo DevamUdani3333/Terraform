@@ -1,0 +1,11 @@
+provider "aws" {
+   region = "us-east-1"
+   access_key = ""
+   secret_key = ""
+}
+resource "aws_eip" "lb" {
+    vpc = true
+}
+resource "aws_s3_bucket" "mybucket" {
+  bucket = "devam-bucket"
+}  
